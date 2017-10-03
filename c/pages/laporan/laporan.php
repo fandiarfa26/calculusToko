@@ -4,9 +4,9 @@
 </div>
 <div class="col s12 m6">
     <div class="card-panel white">
-        <h4>Laporan Keuntungan</h4>
+        <h5>Laporan Keuntungan</h5>
         
-        <table border=1 width="100%">
+        <table class="striped highlight centered responsive-table">
             <thead>
                 <tr>
                     <th>Tahun</th>
@@ -41,8 +41,8 @@
 </div>
 <div class="col s12 m6">
     <div class="card-panel white">
-        <h4>Prediksi Keuntungan</h4>
-        <table border=1 width="100%">
+        <h5>Prediksi Keuntungan</h5>
+        <table class="striped highlight centered responsive-table">
             <thead>
                 <tr>
                     <th>Tahun</th>
