@@ -20,7 +20,7 @@
         <tr>
             <td align="center"><?= $row->id ?></td>
             <td><?= $row->nama ?></td>
-            <td align="right"><?= $row->hargaJual ?></td>
+            <td align="right"><?= number_format($row->hargaJual,2,',','.') ?></td>
             <td align="center"><?= $row->sisa ?></td>
             <td align="center">
                 <a href="index.php?m=barang&p=detail&id=<?= $row->id ?>" title="Detail Barang">Detail</a>

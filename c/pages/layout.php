@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<?php session_start(); ?>
-=======
-<?php
-session_start();
-?>
->>>>>>> 3e4545ba9de977619350fe387e11ee67b313e005
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +36,7 @@ session_start();
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
     <header>
         <nav class="navbar-fixed nav-extended">
             <div class="nav-wrapper">
@@ -66,7 +60,7 @@ session_start();
             <li> <a href="index.php?m=barang">Barang</a></li>
             <li> <a href="index.php?m=pemesanan">Pemesanan</a></li>
             <li> <a href="index.php?m=kasir">Kasir</a></li>
-            <!-- <li> <a href="index.php?m=laporan">Laporan</a></li> -->
+            <li> <a href="index.php?m=laporan">Laporan</a></li>
             
         </ul>
         
@@ -78,7 +72,12 @@ session_start();
         if($menu == '' || $menu == 'dashboard'){
             require('pages/dashboard/dashboard.php');    
         }else{
-            require('pages/'.$menu.'/'.$menu.'.php');
+            $path = 'pages/'.$menu.'/'.$menu.'.php';
+            if(file_exists($path)){
+                require('pages/'.$menu.'/'.$menu.'.php');
+            }else{
+                echo '<h2 align="center">404: Halaman tidak tersedia!</h2>';
+            }
         }
         ?>
         </div>
@@ -101,6 +100,7 @@ session_start();
     
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
     <script>
         // Initialize collapse button
         $(".button-collapse").sideNav({

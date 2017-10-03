@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3e4545ba9de977619350fe387e11ee67b313e005
 <div id="divPesan" class="col s12">
     <div class="card-panel grey darken-3">
         <span class="white-text" id="isiPesan">

@@ -9,6 +9,7 @@
     }
     
     require_once('configDB.php');
+    require_once('Regression.php');
     require_once('pages/layout.php'); 
 
     

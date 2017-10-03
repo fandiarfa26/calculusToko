@@ -18,12 +18,12 @@ while($row = $result->fetch(PDO::FETCH_OBJ)){
         <tr>
             <td>Harga Beli</td>
             <td>:</td>
-            <td>Rp <?= $row->hargaBeli ?></td>
+            <td>Rp <?= number_format($row->hargaBeli,2,',','.') ?></td>
         </tr>
         <tr>
             <td>Harga Jual</td>
             <td>:</td>
-            <td>Rp <?= $row->hargaJual ?></td>
+            <td>Rp <?= number_format($row->hargaJual,2,',','.') ?></td>
         </tr>
         <tr>
             <td>Tanggal Masuk</td>
